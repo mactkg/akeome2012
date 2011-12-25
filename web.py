@@ -4,7 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hi"
+    return Flask.render_template("index.html")
+
+@app.route("reply", methods=['POST', 'GET'])
+def reply():
+    return "hi"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
