@@ -1,15 +1,26 @@
+#-*- coding: utf-8 -*-
 import os
+from flask import render_template
+from flask import redirect
+from flask import url_for
+from flask import request
 from flask import Flask
+
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return Flask.render_template("index.html")
+    return render_template('index.html')
 
-@app.route("reply", methods=['POST', 'GET'])
+@app.route('/reply', methods=['GET','POST'])
 def reply():
-    return "hi"
+    if request.method == 'GET':
+        return redirect(url_for('index'))
+    if request.form['answer'] == u"こたつ":
+        return "YESSSS!!!!"
+    else:
+        return "NOOOOOOO!!!!"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=True)
