@@ -7,9 +7,16 @@
   </head>
   <body>
     <div id="main">
-      <div id="message">
-        {{ message }}
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div id="messages">
+        {% for message in messages %}
+        {{ message }}<br>
+        {% endfor %}
       </div>
+      {% endif %}
+      {% endwith %}
     </div>
+    {% include "footer.html" %}
   </body>
 </html>

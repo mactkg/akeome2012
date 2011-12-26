@@ -7,6 +7,15 @@
   </head>
   <body>
     <div id="main">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div id="messages">
+        {% for message in messages %}
+        {{ message }}<br>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
       <div id="hint">
         <img src="static/hint.png">
       </div>
@@ -18,5 +27,6 @@
         「たいせつなもの」をひらがなでにゅうりょくしてね<br>
       </div>
     </div>
+    {% include "footer.html" %}
   </body>
 </html>

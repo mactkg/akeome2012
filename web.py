@@ -4,9 +4,11 @@ from flask import render_template
 from flask import redirect
 from flask import url_for
 from flask import request
+from flask import flash
 from flask import Flask
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'f*7nqma=0o8)3*a%lywecut%l(wh1s+*o#%3)4kb^vanz0kw$2'
 
 @app.route("/")
 def index():
@@ -17,9 +19,11 @@ def reply():
     if request.method == 'GET':
         return redirect(url_for('index'))
     if request.form['answer'] == u"こたつ":
-        return render_template('ans.html', message=u"せいかーい。")
+        flash(u'ok')
+        return render_template('ans.html', messages=u"せいかーい。")
     else:
-        return render_template('ans.html', message=u"ちがいまーす。")
+        flash(u'ちがうよー。')
+        return redirect(url_for('index'))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
