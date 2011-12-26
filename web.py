@@ -1,5 +1,6 @@
 #-*- coding: utf-8 -*-
 import os
+import unicodedata
 from flask import render_template
 from flask import redirect
 from flask import url_for
@@ -18,10 +19,11 @@ def index():
 def reply():
     if request.method == 'GET':
         return redirect(url_for('index'))
-    if request.form['answer'] == u"こたつ":
+    answer = request.form['answer']
+    if answer == u"こたつ":
         flash(u'ok')
         return render_template('ans.html', messages=u"せいかーい。")
-    elif request.form['answer'] == u"ごたつ":
+    elif answer == u"ごたつ":
         flash(u'おしい。うさぎちゃんが求めているのは「冬を超すためにたいせつなもの」だー！')
         return redirect(url_for('index'))
     else:
