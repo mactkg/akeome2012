@@ -17,9 +17,9 @@ def reply():
     if request.method == 'GET':
         return redirect(url_for('index'))
     if request.form['answer'] == u"こたつ":
-        return "YESSSS!!!!"
+        return render_template('ans.html', message=u"せいかーい。")
     else:
-        return "NOOOOOOO!!!!"
+        return render_template('ans.html', message=u"ちがいまーす。")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

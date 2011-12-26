@@ -1,0 +1,12 @@
+body {
+  background-color:#E5AC72;
+}
+
+#main {
+  background-color:#F2D1AF;
+  margin:40px;
+  padding:20px;
+  /*margin-top:40px;
+  margin-right:40px;*/
+  border-radius: 15px;
+}
