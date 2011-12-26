@@ -3,11 +3,12 @@
 気になる人もいるかも？とおもったので、おまけページということで作ってみました。
 
 ## 使った技術
-- Heroku(Pythonのホスティング環境として)
-- Python(プログラミング言語として)
-- Flask(Python用のマイクロWebフレームワーク)
-- jinja2(Flaskの依存モジュールとして、テンプレート周り)
-- werkzeug(Flaskの依存モジュールとして、サーバーまわり)
+- [Heroku](http://www.heroku.com/)(Pythonのホスティング環境として)
+- [Python](http://python.org/)(プログラミング言語として)
+- [Flask](http://flask.pocoo.org/)(Python用のマイクロWebフレームワーク)
+- [jinja2](http://jinja2.pocoo.org/)(Flaskの依存モジュールとして、テンプレート周り)
+- [werkzeug](http://werkzeug.pocoo.org/)(Flaskの依存モジュールとして、サーバーまわり)
+- [ColorSchemeDesigner](http://colorschemedesigner.com/#0.11Tg0sHw0w0)(色の決定をするWebサービス)
 
 ### Heroku?
 　Rubyをつくったまつもとゆきひろさんも居るあのHerokuです。僕らはWebサービスを作るだけで良くて、
