@@ -21,8 +21,7 @@ def reply():
         return redirect(url_for('index'))
     answer = request.form['answer']
     if answer == u"こたつ":
-        flash(u'ok')
-        return render_template('ans.html', messages=u"せいかーい。")
+        return render_template('ans.html')
     elif answer == u"ごたつ":
         flash(u'おしい。うさぎちゃんが求めているのは「冬を超すためにたいせつなもの」だー！')
         return redirect(url_for('index'))
