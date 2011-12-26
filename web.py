@@ -29,8 +29,8 @@ def reply():
         flash(u'ヒント：今年の干支と数にちゅうもくだー')
         return redirect(url_for('index'))
 
-@app.rout('/omake')
-def reply():
+@app.route('/omake')
+def omake():
     return render_template('omake.html')
 
 if __name__ == "__main__":
