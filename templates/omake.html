@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="static/css.css" type="text/css"/>
+    <title>2012 special</title>
+  </head>
+  <body>
+    <div id="main">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <div id="messages">
+        {% for message in messages %}
+        {{ message }}<br>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endwith %}
+      <div id="omake">
+        {% index "omaketext.html" %}
+      </div>
+    </div>
+    {% include "footer.html" %}
+  </body>
+</html>

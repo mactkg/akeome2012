@@ -29,6 +29,10 @@ def reply():
         flash(u'ヒント：今年の干支と数にちゅうもくだー')
         return redirect(url_for('index'))
 
+@app.rout('/omake')
+def reply():
+    return render_template('omake.html')
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
