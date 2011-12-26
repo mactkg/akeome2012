@@ -22,7 +22,7 @@ def reply():
         flash(u'ok')
         return render_template('ans.html', messages=u"せいかーい。")
     else:
-        flash(u'ヒント：今年の干支と数にちゅうもくする。')
+        flash(u'ヒント：今年の干支と数にちゅうもくだー')
         return redirect(url_for('index'))
 
 if __name__ == "__main__":
