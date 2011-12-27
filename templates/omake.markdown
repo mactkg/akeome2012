@@ -6,7 +6,7 @@
 - [Heroku](http://www.heroku.com/)(Pythonのホスティング環境として)
 - [Python](http://python.org/)(プログラミング言語として)
 - [Flask](http://flask.pocoo.org/)(Python用のマイクロWebフレームワーク)
-- [jinja2](http://jinja2.pocoo.org/)(Flaskの依存モジュールとして、テンプレート周り)
+- [jinja2](http://jinja.pocoo.org/)(Flaskの依存モジュールとして、テンプレート周り)
 - [werkzeug](http://werkzeug.pocoo.org/)(Flaskの依存モジュールとして、サーバーまわり)
 - [ColorSchemeDesigner](http://colorschemedesigner.com/#0.11Tg0sHw0w0)(色の決定をするWebサービス)
 
