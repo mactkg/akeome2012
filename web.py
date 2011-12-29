@@ -33,6 +33,13 @@ def reply():
 def omake():
     return render_template('omake.html')
 
+@app.route('/from')
+def from():
+    if os.environ.has_key('HTTP_REFERER'):
+        return os.environ['HTTP_REFERER']
+    else:
+        return 'none'
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
