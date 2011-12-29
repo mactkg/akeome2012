@@ -34,7 +34,7 @@ def omake():
     return render_template('omake.html')
 
 @app.route('/from')
-def from():
+def fromReturn():
     if os.environ.has_key('HTTP_REFERER'):
         return os.environ['HTTP_REFERER']
     else:
