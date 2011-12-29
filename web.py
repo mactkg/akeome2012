@@ -35,7 +35,7 @@ def omake():
 
 @app.route('/from')
 def fromReturn():
-    return request.referrer
+    return request.args.get('next') or request.referrer
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
