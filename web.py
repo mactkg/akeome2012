@@ -35,10 +35,7 @@ def omake():
 
 @app.route('/from')
 def fromReturn():
-    if os.environ.has_key('HTTP_REFERER'):
-        return os.environ['HTTP_REFERER']
-    else:
-        return 'none'
+    return os.getenv('HTTP_REFERER')
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
