@@ -36,7 +36,7 @@ def omake():
 @app.route('/from')
 def fromReturn():
     s = ""
-    for i in request.environ:
+    for i in request.headers:
         s = s + "," + i
     return s
 
