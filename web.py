@@ -35,7 +35,10 @@ def omake():
 
 @app.route('/from')
 def fromReturn():
-    return str(type(request.environ))
+    s = ""
+    for i in request.environ:
+        s = s + "," + i
+    return s
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
