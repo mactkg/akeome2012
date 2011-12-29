@@ -37,7 +37,7 @@ def omake():
 def fromReturn():
     s = ""
     for i in request.headers:
-        s = s + "," + i
+        s = s + "," + str(i)
     return s
 
 if __name__ == "__main__":
